@@ -329,6 +329,102 @@ tr:nth-child(even) td { background: #f9fbf9; }
 }
 .back-link:hover { color: var(--green); text-decoration: none; }
 
+/* ===== PHOTO GALLERY ===== */
+.photo-gallery {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  margin: -0.1rem -0.1rem 0.75rem;
+}
+.photo-gallery img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border: 1px solid var(--border);
+}
+.photo-gallery a { display: contents; }
+
+/* ===== AIRBNB BADGE ===== */
+.airbnb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #FF5A5F;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+.airbnb-link:hover { background: #e0484d; color: #fff; text-decoration: none; }
+
+/* ===== RATING BADGE ===== */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #fff8e1;
+  color: #8a6000;
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #f0d060;
+}
+.guest-fav {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green);
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ===== GIFT SECTION ===== */
+.gift-card {
+  background: linear-gradient(135deg, #fff8e1, #fff3cd);
+  border: 1.5px solid #f0c040;
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.gift-card h2 { color: #7a5000; font-size: 1rem; margin-bottom: 0.5rem; }
+.gift-item {
+  font-size: 0.875rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(240,192,64,0.3);
+  line-height: 1.5;
+}
+.gift-item:last-child { border-bottom: none; }
+.gift-item strong { color: #7a5000; }
+
+/* ===== POLL BOX ===== */
+.poll-box {
+  background: #e8f4ff;
+  border: 1.5px solid #90caf9;
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.poll-box p { font-size: 0.88rem; color: #1a3a5c; line-height: 1.6; }
+.poll-box strong { color: #1a3a5c; }
+
 /* ===== RESPONSIVE ===== */
 @media (min-width: 480px) {
   .hero-title { font-size: 2rem; }
